@@ -1,9 +1,10 @@
 {
+    "version": 2,
+    "name": "Deno-Example",
     "public": true,
     "functions": {
-      "api/**/*.[jt]s": {
-        "runtime": "vercel-dev-runtime@0.0.2",
-        "includeFiles": "api/**/*.json"
+        "api/**/*.ts": {
+        "runtime": "now-deno@0.2.0"
       }
     },
     "build": {

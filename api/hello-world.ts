@@ -1,6 +1,14 @@
-import { serve } from "https://deno.land/std@0.69.0/http/server.ts";
-const s = serve({ port: 8000 });
-console.log("http://localhost:8000/");
-for await (const req of s) {
-  req.respond({ body: "Hello World\n" });
+import { APIGatewayProxyEvent, APIGatewayProxyResult, Context } from 'https://deno.land/x/lambda/mod.ts';
+
+export async function handler(
+  event: APIGatewayProxyEvent,
+  context: Context
+): Promise<APIGatewayProxyResult> {
+  return {
+    statusCode: 200,
+    body: `Welcome to deno ${Deno.version.deno} 🦕`,
+    headers: {
+      'content-type': 'text/html; charset=utf-8',
+    },
+  };
 }
