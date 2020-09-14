@@ -1,4 +1,8 @@
-import { APIGatewayProxyEvent, APIGatewayProxyResult, Context } from 'https://deno.land/x/lambda/mod.ts';
+import {
+  APIGatewayProxyEvent,
+  APIGatewayProxyResult,
+  Context,
+} from "https://deno.land/x/lambda/mod.ts";
 
 export async function handler(
   event: APIGatewayProxyEvent,
@@ -8,7 +12,7 @@ export async function handler(
     statusCode: 200,
     body: `Welcome to deno ${Deno.version.deno} 🦕`,
     headers: {
-      'content-type': 'text/html; charset=utf-8',
+      "content-type": "text/html; charset=utf-8",
     },
   };
 }
