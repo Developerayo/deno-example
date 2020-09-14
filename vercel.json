@@ -6,10 +6,5 @@
         "api/**/*.ts": {
             "runtime": "now-deno@0.2.0"
         }
-    },
-    "build": {
-        "env": {
-            "DENO_TSCONFIG": "api/tsconfig.json"
-        }
     }
 }
